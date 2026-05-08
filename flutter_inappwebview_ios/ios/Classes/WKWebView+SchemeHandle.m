@@ -11,6 +11,7 @@
 @implementation WKWebView (SchemeHandle)
 
 + (void)load {
+    NSLog(@"WKWebView------SchemeHandle");
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         Method originalMethod = class_getClassMethod(self, @selector(handlesURLScheme:));
